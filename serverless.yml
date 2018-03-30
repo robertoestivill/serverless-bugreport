@@ -1,0 +1,23 @@
+service: bugreport
+
+provider:
+  name: aws
+  runtime: java8
+  stage: local
+
+package:
+  artifact: target/bugreport-1.0-SNAPSHOT.jar
+
+functions:
+  handler-broken:
+    handler: com.example.serverless.bugreport.HandlerBroken
+    events:
+      - http:
+          path: handler/broken
+          method: GET
+  handler-fixed:
+    handler: com.example.serverless.bugreport.HandlerFixed
+    events:
+      - http:
+          path: handler/fixed
+          method: GET

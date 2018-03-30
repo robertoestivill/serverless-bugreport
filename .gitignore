@@ -1,0 +1,23 @@
+#IntelliJ IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+classes
+gen-external-apklibs
+
+#Maven / gradle
+target
+release.properties
+pom.xml.*
+build
+.gradle
+
+#Other
+.DS_Store
+tmp
+lint.xml
+log.txt
+
+/out
+.serverless/
